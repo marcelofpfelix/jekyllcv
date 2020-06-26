@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <!-- Set "A5", "A4" or "A3" for class name -->
+  <!-- Set also "landscape" if you need -->
+  <body class="A4">
+    <!-- Write HTML just like a web page -->
+    {{ content }}
+  </body>
+
+</html>

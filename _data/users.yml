@@ -1,0 +1,36 @@
+user:
+  name        : "Marcelo Félix"
+  avatar      : "/assets/images/u/marcelo.jpeg"
+  bio         : "Service Operations at Celfocus"
+  email       : "marcelo@bandonga.com"
+  telegram    : "marcelofpfelix"
+  location    : "Lisboa, Portugal"
+  github      : "marcelofpfelix"
+  linkedin    : "marcelofelix"
+  born        : "30th September 1988"
+  nationality : "Portuguese"
+  driving     : "Driving licence B"
+  pages       : 2
+  sections:
+    a:
+    - about
+    b:
+    - experience
+
+  data:
+    about:
+      title: About
+      items:
+        - description: "Telecom engineer working in Unified Comms Operations and Support, with a background in IT and Networking.\n
+            Broad knowledge, from VoIP Protocols to Linux Sysadmin, with troubleshooting and service maintenance experience.\n
+            Enthusiastic about open source, cloud computing, automation and containers and eager to learn more about Linux, Networking and VoIP."
+    experience:
+      title: Experience
+      items:
+        - Service Operations
+        - ententy    : Celfocus
+        - dates      : Apr 2016 - Present
+        - location   : Lisboa, Portugal
+        - description: "Telecom engineer working in Unified Comms App Operations and Support, with a background in IT and Networking.
+          Broad knowledge, from VoIP Protocols to Linux Sysadmin, with Troubleshooting and Site Reliability experience.
+          Enthusiastic about cloud computing, automation and containers and eager to learn more about Linux administration and Networking/VoIP."

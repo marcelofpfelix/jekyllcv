@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% assign user = page.user | default: page.users[0] | default: site.user %}
+{% assign cv = site.data.users[user] | default: user %}
+
+<!-- Each sheet element should have the class "sheet" -->
+<!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
+<section class="sheet padding-10mm">
+  <article>
+    {% include cv-profile.html %}
+    {% include cv-sections.html pagenumber="a"%}
+  </article>
+</section>
+
+
+{% for sec_id in cv.sections %}
+  <section class="sheet padding-10mm">
+    <!-- Write HTML just like a web page -->
+    <article>
+      {{sec_id[0]}}
+      {% include cv-sections.html pagenumber=sec_id %}
+    </article>
+  </section>
+{% endfor %}

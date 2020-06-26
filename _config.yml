@@ -1,0 +1,8 @@
+title: Curriculum Vitae
+author:
+  name: Marcelo Félix
+description: >
+  YAML CV for jekyll
+
+include:
+  - _pages
