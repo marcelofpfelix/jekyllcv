@@ -1,0 +1,123 @@
+{% assign user = page.user | default: page.users[0] | default: site.user %}
+{% assign cv = site.data.users[user] | default: user %}
+
+  {% if cv.avatar %}
+    <div class="cv._avatar">
+      {% if cv.avatar contains "://" %}
+        {% assign cv.src = cv.avatar %}
+      {% else %}
+        {% assign cv.src = cv.avatar | absolute_url %}
+      {% endif %}
+
+      {% if cv.home %}
+        {% if cv.home contains "://" %}
+          {% assign cv.link = cv.home %}
+        {% else %}
+          {% assign cv.link = cv.home | absolute_url %}
+        {% endif %}
+        <a href="{{ cv.link }}">
+          <img src="{{ cv.src }}" alt="{{ cv.name }}"">
+        </a>
+      {% else %}
+        <img src="{{ cv.avatar }}" alt="{{ cv.name }}"">
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="cv._content">
+    {% if cv.home %}
+      <a href="{{ cv.link }}"><h3 class="cv._name" itemprop="name">{{ cv.name }}</h3></a>
+    {% else %}
+      <h3 class="cv._name" itemprop="name">{{ cv.name }}</h3>
+    {% endif %}
+    {% if cv.bio %}
+      <p class="cv._bio" itemprop="description">
+        {{ cv.bio }}
+      </p>
+    {% endif %}
+  </div>
+
+  <div class="cv._urls-wrapper">
+    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
+    <ul class="cv._urls social-icons">
+
+  <!-- Profile -->
+
+      {% if cv.uri %}
+        <li>
+          <a href="{{ cv.uri }}" itemprop="url">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ cv.uri }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if cv.email %}
+        <li>
+          <a href="mailto:{{ cv.email }}">
+            <meta itemprop="email" content="{{ cv.email }}" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ cv.email }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if cv.telegram %}
+        <li>
+          <a href="https://t.me/{{ cv.telegram }}" itemprop="sameAs">
+            <i class="fab fa-fw fa-telegram" aria-hidden="true"></i>{{ cv.telegram }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if cv.linkedin %}
+        <li>
+          <a href="https://www.linkedin.com/in/{{ cv.linkedin }}" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>{{ cv.linkedin }}
+          </a>
+        </li>
+      {% endif %}
+
+      {% if cv.github %}
+        <li>
+          <a href="https://github.com/{{ cv.github }}" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i>{{ cv.github }}
+          </a>
+        </li>
+      {% endif %}
+
+  <!-- Additional Info -->
+
+
+
+    </ul>
+    <ul class="cv._urls additional-info">
+
+      {% if cv.location %}
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ cv.location }}</span>
+        </li>
+      {% endif %}
+
+      {% if cv.nationality %}
+        <li>
+          <i class="fas fa-fw fa-flag" aria-hidden="true"></i> <span itemprop="name">{{ cv.nationality }}</span>
+          <span class="flag-icon flag-icon-{{cv.flag}}"></span>
+        </li>
+      {% endif %}
+
+      {% if cv.born %}
+        <li>
+          <i class="fas fa-fw fa-birthday-cake" aria-hidden="true"></i> <span itemprop="name">{{ cv.born }}</span>
+        </li>
+      {% endif %}
+
+      {% if cv.driving %}
+        <li>
+          <i class="fas fa-fw fa-car" aria-hidden="true"></i> <span itemprop="name">{{ cv.driving }}</span>
+        </li>
+      {% endif %}
+
+
+    </ul>
+  </div>
+
+</div>

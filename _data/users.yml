@@ -1,7 +1,7 @@
 user:
   name        : "Marcelo Félix"
-  avatar      : "/assets/images/u/marcelo.jpeg"
-  bio         : "Service Operations at Celfocus"
+  avatar      : "/assets/img/marcelo.jpg"
+  bio         : "Telecom Engineer"
   email       : "marcelo@bandonga.com"
   telegram    : "marcelofpfelix"
   location    : "Lisboa, Portugal"
@@ -9,28 +9,109 @@ user:
   linkedin    : "marcelofelix"
   born        : "30th September 1988"
   nationality : "Portuguese"
-  driving     : "Driving licence B"
+  flag: pt
   pages       : 2
   sections:
-    a:
-    - about
-    b:
-    - experience
+      - about
+      - experience
+      - bbb
 
   data:
     about:
-      title: About
-      items:
-        - description: "Telecom engineer working in Unified Comms Operations and Support, with a background in IT and Networking.\n
+      title: Profile
+      description: "Telecom engineer working in Unified Comms Operations and Support, with a background in IT and Networking.\n
             Broad knowledge, from VoIP Protocols to Linux Sysadmin, with troubleshooting and service maintenance experience.\n
             Enthusiastic about open source, cloud computing, automation and containers and eager to learn more about Linux, Networking and VoIP."
     experience:
-      title: Experience
-      items:
-        - Service Operations
-        - ententy    : Celfocus
-        - dates      : Apr 2016 - Present
-        - location   : Lisboa, Portugal
-        - description: "Telecom engineer working in Unified Comms App Operations and Support, with a background in IT and Networking.
-          Broad knowledge, from VoIP Protocols to Linux Sysadmin, with Troubleshooting and Site Reliability experience.
-          Enthusiastic about cloud computing, automation and containers and eager to learn more about Linux administration and Networking/VoIP."
+      title: Professional Experience
+      range:
+        a: 2014-01-01T00:00:00
+        b: Present
+      groups:
+        - talkdesk
+        - celfocus
+        - capgemini
+      talkdesk:
+        ententy: Talkdesk
+        logo: "/assets/img/talkdesk.png"
+        url: https://talkdesk.com/
+        items:
+          - network
+          - support
+        network:
+          title: VoIP Network Engineer
+          dates: Mar 2020 - Present
+          range:
+            a: 2020-03-01T00:00:00
+            b: Present
+          location   : Remote
+          description: "Specialist responsible to diagnose and solve all complex Call Quality issues (QoS, Network configuration) and SIP trunk setup between multiple SBC/PBX (such as Asterisk) and a CPaaS (such as Twilio) with troubleshooting E2E."
+        support:
+          title      : Support Engineer
+          dates      : Nov 2018 - Mar 2020
+          range      :
+            a: 2018-11-01T00:00:00
+            b: 2020-03-31T00:00:00
+          location   : Lisboa
+          description: "Tier 2 responsible to diagnose and solve Call Quality issues (QoS, Network configuration) REST API platform issues for several external integrations and SIP trunks.\n
+            Acting as main POC for vendors/carrier/partners and liaison between engineering and support teams.\n
+            Identify, document, replicate and triage on product bugs and features."
+
+      celfocus:
+        ententy: Celfocus
+        url: https://celfocus.com/
+        logo: "/assets/img/celfocus.png"
+        items:
+          - operations
+        operations:
+          title      : Operations Support
+          dates      : Apr 2016 - Nov 2018
+          range      :
+            a: 2016-04-01T00:00:00
+            b: 2018-11-30T00:00:00
+          location   : Lisboa
+          description: "In the Unified Communications team, with the Vodafone One Net and GCC service,  working as:<br>
+            *Service Operations*, working as a SRE (Site Reliability Engineer). Sysadmin of Red Hat Linux, Middleware Java EE AS (Weblogic), ActiveMQ JMS Broker and NOKIA mCAS. Responsible to deploy and maintain the availability of custom apps.<br>
+            Familiarity with multiple Databases (InfluxDB, Postgres, TimesTen, OracleDB)<br>
+            Scripting (bash, python) for monitoring and automation of boring stuff.<br>
+            *Technical Support*, in Tier 2, using ITIL practices. Experience with Fault and Change management.<br>
+            Able to provide solutions to customers and work with multiple providers.<br>
+            Manage the acceptance and deploy of new product releases.
+            Provide On-Call support and work well under pressure.
+            Able to troubleshoot Networking issues and REST/SOAP Web Service. Knowledge of VoIP Protocols (essentially SIP) in the IMS Network."
+
+      capgemini:
+        ententy: Capgemini
+        url: https://capgemini.com/
+        logo: "/assets/img/capgemini.png"
+        items:
+          - consultant
+        consultant:
+          title      : Consultant
+          dates      : Lisboa, 2014 - Apr 2016
+          range      :
+            a: 2014-01-01T00:00:00
+            b: 2016-04-30T00:00:00
+          location   : Lisboa
+          description: "Project with the Celfocus Unified Comms Operations Support team, with the Vodafone One Net and IP Trunking. Experience in:<br>
+            Weblogic Server 11g administration (WebCenter Content, Portal; OSB and SOA)<br>
+            Administration of Unix/Linux Systems and Shell scripting.<br>
+            ITIL Service Support, with Tier 2 VoIP/SIP, network diagnostics and troubleshooting.<br>
+            Oracle PL/SQL and SQL SERVER DB management and query tuning."
+
+    education:
+      title: Education
+      groups:
+        - tecnico
+      tecnico:
+        ententy: Técnico - Universidade de Lisboa
+        url: https://tecnico.ulisboa.pt/en/
+        logo: "/assets/img/tecnico.png"
+        items:
+          - meec
+        meec:
+          title      : Master's in Computers & Electrical Engineering
+          location   : Lisboa
+          description: "**Specialisation in Telecommunications and Computers** <br>
+          *Knowledge of:* Fundamentals of Communications, Propagation and Radiation and Telecommunication Networks and Systems.<br>
+          Development of programming skills in C, JAVA and MATLAB. SQL, DB modulation and Entity relationship diagrams. Additional basic knowledge of Mathematica, HTML5, Javascript, PHP."

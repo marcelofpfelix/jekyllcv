@@ -1,8 +1,17 @@
-html {
-  font-size: $base-font-size;
+/*
+ * Set page size here: A5, A4 or A3
+ * Set also "landscape" if you need
+ */
+@page {
+  size: A4
 }
 
-/**
+html {
+  font-size: $base-font-size;
+  text-align: justify;
+}
+
+/*
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6,
@@ -22,4 +31,44 @@ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   font-kerning: normal;
+}
+
+/**
+ * Lists
+
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+ * Images
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+ */
+
+/**
+ * Links
+ */
+a {
+  color: $link-base-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
 }

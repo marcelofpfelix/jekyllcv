@@ -1,0 +1,58 @@
+
+
+.cv_section {
+  color: $brand-color;
+  font-size: $base-font-size * 1.5;
+  font-weight: normal;
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+
+.cv_ententy {
+  font-size: $base-font-size * 1.2;
+  font-weight: 900;
+  padding-bottom: 5px;
+  float:none;
+}
+
+.cv_item {
+  float:left;
+  color: $text-color-light;
+}
+
+.cv_itemdetail {
+  float:none;
+  color: $text-color-light;
+  text-align: right;
+}
+
+.fa-circle  {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.cv_years {
+  color: $brand-color;
+  font-size: $base-font-size * 1.5;
+  font-weight: normal;
+  float:none;
+  text-align: right;
+}
+
+  .alignleft {
+  	float: left;
+  }
+  .alignright {
+  	float: right;
+  }
+
+  img {
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 40px;
+    float:left;
+  }
+
+  img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
