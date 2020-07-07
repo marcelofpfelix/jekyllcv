@@ -1,139 +1,73 @@
-{% assign user = page.user | default: page.users[0] | default: site.user %}
-{% assign cv = site.data.users[user] | default: user %}
+{% assign section = include.section %}
 
-<div>
+<h3 class="cv_section">
+  <div id="textbox">
+    <i class="fas fa-{{section.icon}}"></i>
 
-  {% if cv.data.about %}
-    {% assign section = cv.data.about %}
-    <h3 class="cv_section">
-      <i class="fas fa-user"></i>
-      {{section.title}}
-    </h3>
-    {{section.description | markdownify}}
-  {% endif %}
+    {{section.title}}
+    {% if section.range %}
+      <div class="alignright">
+        <i class="fas fa-calendar"></i>
+        <div id="exp"></div>
+      </div>
+    {% endif %}
+  </div>
+</h3>
+<div style="clear: both;"></div>
 
+<script>
+  if (moment('{{section.range.b}}').isValid()) {
+    b = moment('{{section.range.b}}', 'YYYY-MM-DD');
+  } else {
+    b = moment();
+  }
+  $("#exp").replaceWith("   "	+ Math.round(b.diff(moment('{{section.range.a}}', 'YYYY-MM-DD'), 'years', true) * 10) / 10 + " y");
+</script>
 
-  {% if cv.data.experience %}
-    {% assign section = cv.data.experience %}
-    <h3 class="cv_section">
-      <div id="textbox">
-        {{section.title}}
-        {% if section.range %}
-          <div class="alignright"><div id="exp"></div></div>
+{% for group_id in section.groups %}
+
+  {% assign group = section.[group_id] %}
+  <a href="{{ group.url }}">
+    <img src="{{ group.logo }}" alt="{{ group.ententy }}">
+    <h4 class="cv_ententy">{{group.ententy}}</h4>
+  </a>
+
+  {% assign after_logo = false %}
+  {% for item_id in group.items %}
+    {% assign item = group.[item_id] %}
+
+    <div id="textbox">
+    <div class="cv_item">
+      {% if after_logo %}
+        <i class="far fa-circle"></i>
+      {% endif %}
+      {% assign after_logo = true %}
+      {{item.title | escape }}
+
+      <div class="alignright">
+        {% if {{item.flag}} %}
+          <span class="flag-icon flag-icon-{{item.flag}}"></span>
+        {% endif %}
+        {{item.location}}
+        {% if item.dates %}
+          , {{item.dates}}
+        {% endif %}
+        {% if item.range %}
+          <i class="fas fa-calendar"></i>
+          <div id="{{group_id}}{{item_id}}"></div>
         {% endif %}
       </div>
-    </h3>
-    <div style="clear: both;"></div>
-
+    </div>
     <script>
-      if (moment('{{section.range.b}}').isValid()) {
-        b = moment('{{section.range.b}}', 'YYYY-MM-DD');
+      if (moment('{{item.range.b}}').isValid()) {
+        b = moment('{{item.range.b}}', 'YYYY-MM-DD');
       } else {
         b = moment();
       }
-      $("#exp").replaceWith("   "	+ Math.round(b.diff(moment('{{section.range.a}}', 'YYYY-MM-DD'), 'years', true) * 10) / 10 + " y");
+      $("#{{group_id}}{{item_id}}").replaceWith("   "	+ Math.round(b.diff(moment('{{item.range.a}}', 'YYYY-MM-DD'), 'years', true) * 10) / 10 + " y");
     </script>
+    </div>
 
-    {% for group_id in section.groups %}
-
-      {% assign group = section.[group_id] %}
-      <a href="{{ group.url }}">
-        <img src="{{ group.logo }}" alt="{{ group.ententy }}">
-        <h4 class="cv_ententy">{{group.ententy}}</h4>
-      </a>
-
-      {% assign after_logo = false %}
-      {% for item_id in group.items %}
-        {% assign item = group.[item_id] %}
-
-        <div class="cv_item">
-          {% if after_logo %}
-            <i class="far fa-circle"></i>
-          {% endif %}
-          {% assign after_logo = true %}
-          {{item.title | escape }}
-        </div>
-        <div class="cv_itemdetail">
-          {% if {{item.flag}} %}
-            <span class="flag-icon flag-icon-{{item.flag}}"></span>
-          {% endif %}
-          {{item.location}}, {{item.dates}}
-          <i class="fas fa-calendar"></i>
-          <div id="{{group_id}}{{item_id}}"></div>
-        </div>
-        <script>
-          if (moment('{{item.range.b}}').isValid()) {
-            b = moment('{{item.range.b}}', 'YYYY-MM-DD');
-          } else {
-            b = moment();
-          }
-          $("#{{group_id}}{{item_id}}").replaceWith("   "	+ Math.round(b.diff(moment('{{item.range.a}}', 'YYYY-MM-DD'), 'years', true) * 10) / 10 + " y");
-        </script>
-
-        {{item.description | markdownify}}
-      {% endfor %}
-    {% endfor %}
-  {% endif %}
-
-  {% if cv.data.education %}
-    {% assign section = cv.data.education %}
-    <h3 class="cv_section">
-      <div id="textbox">
-        {{section.title}}
-        {% if section.range %}
-          <div class="alignright"><div id="exp"></div></div>
-        {% endif %}
-      </div>
-    </h3>
-    <div style="clear: both;"></div>
-
-    <script>
-      if (moment('{{section.range.b}}').isValid()) {
-        b = moment('{{section.range.b}}', 'YYYY-MM-DD');
-      } else {
-        b = moment();
-      }
-      $("#exp").replaceWith("   "	+ Math.round(b.diff(moment('{{section.range.a}}', 'YYYY-MM-DD'), 'years', true) * 10) / 10 + " y");
-    </script>
-
-    {% for group_id in section.groups %}
-
-      {% assign group = section.[group_id] %}
-      <a href="{{ group.url }}">
-        <img src="{{ group.logo }}" alt="{{ group.ententy }}">
-        <h4 class="cv_ententy">{{group.ententy}}</h4>
-      </a>
-
-      {% assign after_logo = false %}
-      {% for item_id in group.items %}
-        {% assign item = group.[item_id] %}
-
-        <div class="cv_item">
-          {% if after_logo %}
-            <i class="far fa-circle"></i>
-          {% endif %}
-          {% assign after_logo = true %}
-          {{item.title | escape }}
-        </div>
-        <div class="cv_itemdetail">
-          {% if {{item.flag}} %}
-            <span class="flag-icon flag-icon-{{item.flag}}"></span>
-          {% endif %}
-          {{item.location}}, {{item.dates}}
-          <i class="fas fa-calendar"></i>
-          <div id="{{group_id}}{{item_id}}"></div>
-        </div>
-        <script>
-          if (moment('{{item.range.b}}').isValid()) {
-            b = moment('{{item.range.b}}', 'YYYY-MM-DD');
-          } else {
-            b = moment();
-          }
-          $("#{{group_id}}{{item_id}}").replaceWith("   "	+ Math.round(b.diff(moment('{{item.range.a}}', 'YYYY-MM-DD'), 'years', true) * 10) / 10 + " y");
-        </script>
-
-        {{item.description | markdownify}}
-      {% endfor %}
-    {% endfor %}
-  {% endif %}
-</div>
+    {{item.description | markdownify}}
+  {% endfor %}
+{% endfor %}

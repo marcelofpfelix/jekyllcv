@@ -5,16 +5,19 @@ layout: default
 {% assign user = page.user | default: page.users[0] | default: site.user %}
 {% assign cv = site.data.users[user] | default: user %}
 
-<!-- Each sheet element should have the class "sheet" -->
-<!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
 {% for i in (1..cv.pages) %}
   <section class="sheet padding-10mm">
-    <!-- Write HTML just like a web page -->
-    <article>
+  <article class="cv">
       {% if forloop.first == true %}
         {% include cv-profile.html %}
       {% endif %}
-      {% include cv-sections.html pagenumber=forloop.index %}      
+      {% assign page_id = forloop.index %}
+      {% for sec_id in cv.sections %}
+        {% if cv.data[sec_id].page == page_id %}
+          {% assign section = cv.data[sec_id] %}
+          {% include cv-sections.html section = section %}
+        {% endif %}
+      {% endfor %}
     </article>
   </section>
 {% endfor %}

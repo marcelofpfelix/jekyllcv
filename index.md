@@ -1,3 +1,6 @@
 ---
-layout: cv
+layout: page
 ---
+
+
+{% include_relative README.md %}

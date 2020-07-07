@@ -1,6 +1,6 @@
 ---
 title: "Curriculum Vitae"
-user: user
+user: marcelo
 layout: cv
-permalink: "/user"
+permalink: "/marcelo"
 ---

@@ -1,13 +1,13 @@
 user:
-  name        : "Marcelo Félix"
+  name        : "Henriques D. Afonso"
   avatar      : "/assets/img/marcelo.jpg"
-  bio         : "Telecom Engineer"
-  email       : "marcelo@bandonga.com"
-  telegram    : "marcelofpfelix"
+  bio         : "Entrepreneur"
+  email       : "afonso@portugal.pt"
+  telegram    : "afonsopt"
   location    : "Lisboa, Portugal"
-  github      : "marcelofpfelix"
-  linkedin    : "marcelofelix"
-  born        : "30th September 1988"
+  github      : "afonsopt"
+  linkedin    : "afonsopt"
+  born        : "25 July 1109"
   nationality : "Portuguese"
   flag: pt
   pages       : 2
@@ -71,10 +71,10 @@ user:
             b: 2018-11-30T00:00:00
           location   : Lisboa
           description: "In the Unified Communications team, with the Vodafone One Net and GCC service,  working as:<br>
-            *Service Operations*, working as a SRE (Site Reliability Engineer). Sysadmin of Red Hat Linux, Middleware Java EE AS (Weblogic), ActiveMQ JMS Broker and NOKIA mCAS. Responsible to deploy and maintain the availability of custom apps.<br>
+            - *Service Operations*, working as a SRE (Site Reliability Engineer). Sysadmin of Red Hat Linux, Middleware Java EE AS (Weblogic), ActiveMQ JMS Broker and NOKIA mCAS. Responsible to deploy and maintain the availability of custom apps.<br>
             Familiarity with multiple Databases (InfluxDB, Postgres, TimesTen, OracleDB)<br>
             Scripting (bash, python) for monitoring and automation of boring stuff.<br>
-            *Technical Support*, in Tier 2, using ITIL practices. Experience with Fault and Change management.<br>
+            - *Technical Support*, in Tier 2, using ITIL practices. Experience with Fault and Change management.<br>
             Able to provide solutions to customers and work with multiple providers.<br>
             Manage the acceptance and deploy of new product releases.
             Provide On-Call support and work well under pressure.
@@ -88,7 +88,7 @@ user:
           - consultant
         consultant:
           title      : Consultant
-          dates      : Lisboa, 2014 - Apr 2016
+          dates      : 2014 - Apr 2016
           range      :
             a: 2014-01-01T00:00:00
             b: 2016-04-30T00:00:00
@@ -115,3 +115,307 @@ user:
           description: "**Specialisation in Telecommunications and Computers** <br>
           *Knowledge of:* Fundamentals of Communications, Propagation and Radiation and Telecommunication Networks and Systems.<br>
           Development of programming skills in C, JAVA and MATLAB. SQL, DB modulation and Entity relationship diagrams. Additional basic knowledge of Mathematica, HTML5, Javascript, PHP."
+marcelo:
+  name        : Marcelo Félix
+  avatar      : /assets/img/marcelo.jpg
+  bio         : Telecom Engineer @talkdesk
+  email       : "marcelo  bandonga.com"
+  telegram    : marcelofpfelix
+  location    : Remote or Europe
+  github      : marcelofpfelix
+  linkedin    : marcelofelix
+  born        : 2014-01-01T00:00:00
+  nationality :
+    - Portuguese
+  flag:
+    - pt
+  languages :
+    - Proficient in English
+  flag:
+    - uk
+  roles:
+    - asd
+    - asdasdas
+  pages: 2
+  sections:
+      - about
+      - experience
+      - education
+      - certifications
+      - skills
+      - organizations
+      - volunteering
+      - projects
+      - interests
+
+  data:
+    about:
+      title: Profile
+      icon: user
+      page: 1
+      groups:
+        - profile
+      profile:
+        items:
+          - profile
+        profile:
+          description: "Telecom engineer working in Unified Comms Operations and Support, with a background in IT and Networking.<br>
+                Broad knowledge, from VoIP Protocols to Sysadmin, with troubleshooting and service maintenance experience.
+                Eager to learn more about about **Linux**, **Networking**, **VoIP**, monitoring, cloud computing, automation and containers.<br>
+                Enthusiastic about open source, writing articles and experimenting in a homelab."
+
+    experience:
+      title: Professional Experience
+      icon: briefcase
+      page: 1
+      range:
+        a: 2014-01-01T00:00:00
+        b: Present
+      groups:
+        - talkdesk
+        - celfocus
+        - capgemini
+      talkdesk:
+        ententy: Talkdesk
+        logo: "/assets/img/talkdesk.png"
+        url: https://talkdesk.com/
+        items:
+          - network
+          - support
+        network:
+          title: VoIP Network Engineer
+          dates: Mar 2020 - Present
+          range:
+            a: 2020-03-01T00:00:00
+            b: Present
+          location   : Remote
+          description: "Specialist responsible to diagnose and solve all complex Call Quality issues (QoS, Network configuration) and SIP trunk setup between multiple SBC/PBX (such as Asterisk) and a CPaaS (such as Twilio) with troubleshooting E2E."
+        support:
+          title      : Support Engineer
+          dates      : Nov 2018 - Mar 2020
+          range      :
+            a: 2018-11-01T00:00:00
+            b: 2020-03-31T00:00:00
+          location   : Lisboa
+          description: "Tier 2 responsible to diagnose and solve Call Quality issues (QoS, Network configuration) REST API platform issues for several external integrations and SIP trunks.\n
+            Acting as main POC for vendors/carrier/partners and liaison between engineering and support teams.\n
+            Identify, document, replicate and triage on product bugs and features."
+
+      celfocus:
+        ententy: Celfocus
+        url: https://celfocus.com/
+        logo: "/assets/img/celfocus.png"
+        items:
+          - operations
+        operations:
+          title      : Operations Support
+          dates      : Apr 2016 - Nov 2018
+          range      :
+            a: 2016-04-01T00:00:00
+            b: 2018-11-30T00:00:00
+          location   : Lisboa
+          description: "In the Unified Communications team, with the Vodafone One Net and GCC service,  working as:<br>
+            - *Service Operations*, working as a SRE (Site Reliability Engineer). Sysadmin of Red Hat Linux, Middleware Java EE AS (Weblogic), ActiveMQ JMS Broker and NOKIA mCAS. Responsible to deploy and maintain the availability of custom apps.<br>
+            Familiarity with multiple Databases (InfluxDB, Postgres, TimesTen, OracleDB)<br>
+            Scripting (bash, python) for monitoring and automation of boring stuff.<br>
+            <br>
+            - *Technical Support*, in Tier 2, using ITIL practices. Experience with Fault and Change management.<br>
+            Able to provide solutions to customers and work with multiple providers.<br>
+            Manage the acceptance and deploy of new product releases.
+            Provide On-Call support and work well under pressure.
+            Able to troubleshoot Networking issues and REST/SOAP Web Service. Knowledge of VoIP Protocols (essentially SIP) in the IMS Network."
+
+      capgemini:
+        ententy: Capgemini
+        url: https://capgemini.com/
+        logo: "/assets/img/capgemini.png"
+        items:
+          - consultant
+        consultant:
+          title      : Consultant
+          dates      : 2014 - Apr 2016
+          range      :
+            a: 2014-01-01T00:00:00
+            b: 2016-04-30T00:00:00
+          location   : Lisboa
+          description: "Project with the Celfocus Unified Comms Operations Support team, with the Vodafone One Net and IP Trunking. Experience in:<br>
+            Weblogic Server 11g administration (WebCenter Content, Portal; OSB and SOA)<br>
+            Administration of Unix/Linux Systems and Shell scripting.<br>
+            ITIL Service Support, with Tier 2 VoIP/SIP, network diagnostics and troubleshooting.<br>
+            Oracle PL/SQL and SQL SERVER DB management and query tuning."
+
+    education:
+      title: Education
+      icon: school
+      page: 1
+      groups:
+        - tecnico
+      tecnico:
+        ententy: Técnico - Universidade de Lisboa
+        url: https://tecnico.ulisboa.pt/en/
+        logo: "/assets/img/tecnico.png"
+        items:
+          - meec
+        meec:
+          title      : Master's in Computers & Electrical Engineering
+          location   : Lisboa
+          description: "**Specialisation in Telecommunications and Computers** <br>
+          *Knowledge of:* Fundamentals of Communications, Propagation and Radiation and Telecommunication Networks and Systems.<br>
+          Development of programming skills in C, JAVA and MATLAB. SQL, DB modulation and Entity relationship diagrams. Additional basic knowledge of Mathematica, HTML5, Javascript, PHP."
+
+    certifications:
+      title: Certifications
+      icon: award
+      page: 2
+      groups:
+        - webLogic
+      webLogic:
+        ententy: WebLogic Server 12c Administrator
+        url: https://www.youracclaim.com/users/marcelofelix
+        logo: "/assets/img/weblogic.png"
+        items:
+          - oracle
+        oracle:
+          title: Oracle
+
+    skills:
+      title: Skills
+      icon: tools
+      page: 2
+      groups:
+        - skills
+      skills:
+        items:
+          - skills
+        skills:
+          description: "
+           -- Understanding of Networking (TCP/IP), IMS Network, WebRTC and VOIP: SIP/RTP Protocols.<br>
+           -- Ability to develop scripts (bash/python) and git.<br>
+           -- Linux (Red Hat), Weblogic, PBXs and ActiveMQ Administration.<br>
+           -- Experience with multiple Databases (InfluxDB, Postgres, TimesTen, OracleDB).<br>
+           -- Automate Linux, network and app configurations with ansible.<br>
+           -- Interaction with multiple monitoring tools, such as ElasticSearch, Nagios/CheckMK and Grafana."
+
+    organizations:
+      title: Organizations
+      icon: university
+      page: 2
+      groups:
+        - best
+        - systemsgroup
+        - desordem
+      best:
+        ententy: Best
+        url: https://www.best.eu.org
+        logo: "/assets/img/best.jpeg"
+        items:
+          - course
+        course:
+          title: Sprint course
+          dates      : May 2013
+          location   : Lyon
+          flag: fr
+          description: "Course about telecommunications, with students around Europe."
+      systemsgroup:
+        ententy: SystemsGroup
+        url: https://systems-group.org/
+        logo: "/assets/img/systemsgroup.png"
+        items:
+          - fiscal
+        fiscal:
+          title: Finance Board
+          dates      : 2010 - 2011
+          location   : Lisboa
+          description: "Youth Association with IT services and aim to support entrepreneurship and the creation of junior companies."
+      desordem:
+        ententy: República "A Desordem dos Engenheiros"
+        url: https://desordem.org
+        logo: "/assets/img/desordem.png"
+        items:
+          - board
+        board:
+          title: Secretary / President
+          dates      : 2008 - 2013
+          location   : Lisboa
+          description: "A fraternity house connected to Instituto Superior Técnico. Here, I have been involved with all tasks regarding financial, human and material resources. I was also in charge of the diplomatic relationships with other fraternities and institutions and its organized events."
+
+    volunteering:
+      title: Volunteering
+      icon: hands-helping
+      page: 2
+      groups:
+        - namaacha
+        - acrides
+        - leigos
+        - gastagus
+      gastagus:
+        ententy: GASTagus
+        url: https://www.gastagus.org
+        logo: "/assets/img/gastagus.png"
+        items:
+          - gastagus
+        gastagus:
+          title: Volunteer / Collaborator / Collaborator lead
+          dates      : 2011 - 2014
+          location   : Lisboa
+          description: "NGDO where I received 120 hours of training in education for development and fundraising our international volunteer project. Collaborator, responsible for volunteers recruitment and training, as well as financial, logistic coordination and activity planning for youth volunteers for short-term international projects"
+      acrides:
+        ententy: ACRIDES
+        url: http://acrides.org.cv
+        logo: "/assets/img/acrides.png"
+        items:
+          - acrides
+        acrides:
+          title: Volunteer / Volunteer lead
+          dates      : Aug 2012 / Aug 2013
+          flag       : cv
+          location   : Praia
+          description: "Volunteer in the GASTagus project in the outskirts of Praia: Cooperate with a local NGDO, ACRIDES, giving training to children, teenagers and adults in several subjects in the field of education for development and Leader in the next year"
+      namaacha:
+        ententy: Colégio Maria Auxiliadora
+        url: https://sdb.org
+        logo: "/assets/img/salesianos.png"
+        items:
+          - namaacha
+        namaacha:
+          title: Volunteer lead
+          dates      : Aug 2014
+          flag       : mz
+          location   : Namaacha
+          description: "The leader in a short-term GASTagus project: management of a 5 volunteers team, supervisor of the project design and implementation and cooperation with local NGOs."
+      leigos:
+        ententy: Leigos para o Desenvolvimento
+        url: https://pontosj.pt/leigos/
+        logo: "/assets/img/leigos.png"
+        items:
+          - leigos
+        leigos:
+          title: Volunteer
+          dates      : 2012
+          location   : Lisboa
+          description: "Supporting immigrant children in school underachievement and integration at Centro S. Pedro Claver."
+
+    projects:
+      page: 2
+      title: Projects
+      icon: tasks
+      groups:
+        - projects
+      projects:
+        items:
+          - projects
+        projects:
+          description: "Columnist in the Integral newspaper, about Técnico to it's students, 2012.<br>
+            Winner of [Global Management Challenge](https://globalmanagementchallenge.pt/) at Técnico and Accenture, 2011."
+
+    interests:
+      title: Interests
+      icon: mountain
+      page: 2
+      groups:
+        - interests
+      interests:
+        items:
+          - interests
+        interests:
+          description: "Running"
