@@ -1,15 +1,19 @@
-$brand-color:           #21618C !default;
-$brand-color-light:     lighten($brand-color, 20%) !default;
-$brand-color-dark:      darken($brand-color, 20%) !default;
+$brand-color:            #21618C !default;
+$brand-color-light:      lighten($brand-color, 20%) !default;
+$brand-color-light1:     lighten($brand-color, 60%) !default;
+$brand-color-dark:       darken($brand-color, 20%) !default;
 
-$text-color:            #111111 !default;
-$text-color-light:      lighten($text-color, 30%) !default;
+$download-color:         #58D68D !default;
+$download-color-light:   lighten($download-color, 40%) !default;
+
+$text-color:             #111111 !default;
+$text-color-light:       lighten($text-color, 30%) !default;
 
 $text-color-light1:      lighten($text-color, 90%) !default;
 $text-color-light3:      lighten($text-color, 70%) !default;
 $text-color-light5:      lighten($text-color, 50%) !default;
 
 
-$link-base-color:       $text-color !default;
-$link-visited-color:    $text-color !default;
-$link-hover-color:      $brand-color-light !default;
+$link-base-color:        $text-color !default;
+$link-visited-color:     $text-color !default;
+$link-hover-color:       $brand-color-light !default;

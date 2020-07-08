@@ -5,13 +5,33 @@ layout: default
 {% assign user = page.user | default: page.users[0] | default: site.user %}
 {% assign cv = site.data.users[user] | default: user %}
 
+<div class="no-print">
+  <div id="cv_download">
+    You can also
+    <a href="javascript:window.print()">
+       <i class="fas fa-print"></i> Print or <i class="fas fa-save"></i> Save it as PDF
+    </a>.
+  </div>
+</div>
+
 {% for i in (1..cv.pages) %}
   <section class="sheet padding-10mm">
-  <article class="cv">
+    <article class="cv">
       {% if forloop.first == true %}
         {% include cv-profile.html %}
+        {% if cv.url %}
+          <div id="cv_info_message">
 
+            <i class="fas fa-info-circle brand-color"></i>
+
+            You can find this CV always updated at
+            <a href="https://{{cv.url}}">
+               {{cv.url}}
+            </a>.
+          </div>
+        {% endif %}
       {% endif %}
+
       {% assign page_id = forloop.index %}
       {% for sec_id in cv.sections %}
         {% if cv.data[sec_id].page == page_id %}
@@ -19,6 +39,13 @@ layout: default
           {% include cv-sections.html section = section %}
         {% endif %}
       {% endfor %}
+
+      <div id="cv_foot">
+        <div id="cv_madeby">
+           <i class="fab fa-osi"></i> made with <a href="https://https://github.com/marcelofpfelix/jekyllcv">marcelofpfelix/jekyllcv</a>.
+        </div>
+      </div>
+
     </article>
   </section>
 {% endfor %}

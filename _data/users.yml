@@ -130,9 +130,10 @@ user:
 
 
 marcelo:
-  name        : Marcelo Félix
-  avatar      : /assets/img/marcelo.jpg
-  bio         : Telecom Engineer @talkdesk
+  name: Marcelo Félix
+  avatar: /assets/img/marcelo.jpg
+  bio: Telecom Engineer @talkdesk
+  url: bandonga.com/cv/marcelo
   email_user  : marcelo
   email_domain : bandonga.com
   links:
