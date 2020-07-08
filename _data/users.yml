@@ -115,27 +115,63 @@ user:
           description: "**Specialisation in Telecommunications and Computers** <br>
           *Knowledge of:* Fundamentals of Communications, Propagation and Radiation and Telecommunication Networks and Systems.<br>
           Development of programming skills in C, JAVA and MATLAB. SQL, DB modulation and Entity relationship diagrams. Additional basic knowledge of Mathematica, HTML5, Javascript, PHP."
+
+    interests:
+      title: Interests
+      icon: mountain
+      page: 2
+      groups:
+        - interests
+      interests:
+        items:
+          - interests
+        interests:
+          description: "Running"
+
+
 marcelo:
   name        : Marcelo Félix
   avatar      : /assets/img/marcelo.jpg
   bio         : Telecom Engineer @talkdesk
-  email       : "marcelo  bandonga.com"
-  telegram    : marcelofpfelix
-  location    : Remote or Europe
-  github      : marcelofpfelix
-  linkedin    : marcelofelix
-  born        : 2014-01-01T00:00:00
-  nationality :
-    - Portuguese
-  flag:
-    - pt
-  languages :
-    - Proficient in English
-  flag:
-    - uk
+  email_user  : marcelo
+  email_domain : bandonga.com
+  links:
+    - linkedin
+    - github
+    - telegram
+    - keybase
+  telegram:
+    name: marcelofpfelix
+    url: https://t.me/
+    icon: telegram
+  github :
+    name: marcelofpfelix
+    url: https://github.com/
+    icon: github
+  linkedin:
+    name: marcelofelix
+    url: https://www.linkedin.com/in/
+    icon: linkedin
+  keybase:
+    name: marcelofpfelix
+    url: https://keybase.io/
+    icon: keybase
+  link: bandonga.com
+  location    : Working remote or at Europe
+  born        : 1988-09-30T00:00:00
+  nationality:
+    - nat_pt
+  nat_pt:
+    name: Portuguese
+    flag: pt
+  languages:
+    - lan_en
+  lan_en:
+      name: Proficient in English
+      flag: gb
   roles:
-    - asd
-    - asdasdas
+    - SysAdmin  (SRE / Infrastructure Operations)
+    - Technical Support Engineer (VoIP Network)
   pages: 2
   sections:
       - about

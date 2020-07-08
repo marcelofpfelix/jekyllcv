@@ -32,12 +32,37 @@
   text-align: right;
 }
 
-  .alignleft {
-  	float: left;
-  }
-  .alignright {
-  	float: right;
-  }
+.cv_profile_detail  {
+  font-size: $base-font-size * 0.9;
+}
+
+.cv_icon  {
+  color: $brand-color;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+}
+
+.cv_profile_name  {
+  float: none;
+}
+
+
+.cv_profile_h {
+  color: $brand-color;
+  font-size: $base-font-size * 1.2;
+  font-weight: 900;
+  margin-top:: 10px;
+  margin-left:: 10px;
+  margin-bottom:: 8px;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
 
   body, h1, h2, h3, h4, h5, h6,
   p, blockquote, pre, hr,
@@ -56,24 +81,73 @@
   }
 
   img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    box-shadow: 0 0 2px 1px $brand-color-light;
   }
 
 
 }
 
-.cv._avatar {
+#avatar {
   img {
-    border-radius: 25px;
-    margin-right: 5px;
-    width: 40px;
+    border-radius: 50%;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 18px;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 2px solid $text-color-light;
     float:left;
-  }
 
+    img:hover {
+      box-shadow: 0 0 2px 1px $text-color-light1;
+    }
+  }
+}
+
+#cv_avatar {
+    background: $text-color-light3;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    float:left;
+    margin-bottom: 15px;
+}
+
+#cv_profile {
+    background: $text-color-light1;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+#cv_contact {
+    width: 269.062px;
+    float: left;
+}
+
+#cv_info {
+    width: 269.063px;
+    float:right;
+}
+
+#cv_name {
+  color: $brand-color;
+  font-size: $base-font-size * 2.2;
+  font-weight: 900;
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+
+#cv_bio {
+  font-size: $base-font-size * 0.9;
 }
 
 
-
+#info_message {
+  background: $text-color-light3;
+    
+  font-size: $base-font-size * 0.9;
+}
 
 /******************************************************************************/
 

@@ -1,123 +1,140 @@
 {% assign user = page.user | default: page.users[0] | default: site.user %}
 {% assign cv = site.data.users[user] | default: user %}
 
-  {% if cv.avatar %}
-    <div class="cv._avatar">
-      {% if cv.avatar contains "://" %}
-        {% assign cv.src = cv.avatar %}
-      {% else %}
-        {% assign cv.src = cv.avatar | absolute_url %}
-      {% endif %}
 
-      {% if cv.home %}
-        {% if cv.home contains "://" %}
-          {% assign cv.link = cv.home %}
-        {% else %}
-          {% assign cv.link = cv.home | absolute_url %}
-        {% endif %}
-        <a href="{{ cv.link }}">
-          <img src="{{ cv.src }}" alt="{{ cv.name }}"">
-        </a>
-      {% else %}
-        <img src="{{ cv.avatar }}" alt="{{ cv.name }}"">
-      {% endif %}
-    </div>
-  {% endif %}
+<div id="cv_avatar">
 
-  <div class="cv._content">
-    {% if cv.home %}
-      <a href="{{ cv.link }}"><h3 class="cv._name" itemprop="name">{{ cv.name }}</h3></a>
-    {% else %}
-      <h3 class="cv._name" itemprop="name">{{ cv.name }}</h3>
-    {% endif %}
-    {% if cv.bio %}
-      <p class="cv._bio" itemprop="description">
-        {{ cv.bio }}
-      </p>
-    {% endif %}
+{% if cv.avatar %}
+  <div id="avatar">
+      <img src="{{ cv.avatar }}" alt="{{ cv.name }}"">
   </div>
+{% endif %}
+    <div id="cv_name">{{ cv.name }}</div>
+    <p id="cv_bio">{{ cv.bio }}</p>
+</div>
 
-  <div class="cv._urls-wrapper">
-    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | remove: ":" | default: "Follow" }}</button>
-    <ul class="cv._urls social-icons">
 
-  <!-- Profile -->
+<div id="cv_profile">
+  <div id="cv_contact">
 
-      {% if cv.uri %}
-        <li>
-          <a href="{{ cv.uri }}" itemprop="url">
-            <i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ cv.uri }}
-          </a>
-        </li>
-      {% endif %}
+    <div class="cv_profile_h">Contact</div>
 
-      {% if cv.email %}
-        <li>
-          <a href="mailto:{{ cv.email }}">
-            <meta itemprop="email" content="{{ cv.email }}" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ cv.email }}
-          </a>
-        </li>
-      {% endif %}
+    <!-- Profile -->
+    {% if cv.email_user %}
+      <div class="cv_profile_detail">
+        <div class="cv_icon">
+          <i class="fas fa-envelope-square"></i>
+        </div>
+        <div class="cv_profile_name">
+          {{ cv.email_user }} <i class="fas fa-at" aria-hidden="true"></i> {{ cv.email_domain }}
+        </div>
+      </div>
+    {% endif %}
 
-      {% if cv.telegram %}
-        <li>
-          <a href="https://t.me/{{ cv.telegram }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-telegram" aria-hidden="true"></i>{{ cv.telegram }}
-          </a>
-        </li>
-      {% endif %}
 
-      {% if cv.linkedin %}
-        <li>
-          <a href="https://www.linkedin.com/in/{{ cv.linkedin }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>{{ cv.linkedin }}
-          </a>
-        </li>
-      {% endif %}
+    {% for sec_id in cv.links %}
+      {% assign account = cv[sec_id] %}
+      <div class="cv_profile_detail">
+        <a href="{{account.url}}{{account.name}}">
+          <div class="cv_icon">
+            <i class="fab fa-{{account.icon}}"></i>
+          </div>
+          <div class="cv_profile_name">
+            {{account.name}}
+          </div>
+        </a>
+      </div>
+    {% endfor %}
 
-      {% if cv.github %}
-        <li>
-          <a href="https://github.com/{{ cv.github }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-github" aria-hidden="true"></i>{{ cv.github }}
-          </a>
-        </li>
-      {% endif %}
+    {% if cv.link %}
+      <div class="cv_profile_detail">
+        <a href="https://{{ cv.link }}">
+          <div class="cv_icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <div class="cv_profile_name">
+             {{ cv.link }}
+          </div>
+        </a>
+      </div>
+    {% endif %}
+
+
+
 
   <!-- Additional Info -->
 
-
-
-    </ul>
-    <ul class="cv._urls additional-info">
+  </div>
+  <div id="cv_info">
+    <div class="cv_profile_h">Info</div>
 
       {% if cv.location %}
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">{{ cv.location }}</span>
-        </li>
-      {% endif %}
-
-      {% if cv.nationality %}
-        <li>
-          <i class="fas fa-fw fa-flag" aria-hidden="true"></i> <span itemprop="name">{{ cv.nationality }}</span>
-          <span class="flag-icon flag-icon-{{cv.flag}}"></span>
-        </li>
+        <div class="cv_profile_detail">
+          <div class="cv_icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="cv_profile_name">
+            {{ cv.location }}
+          </div>
+        </div>
       {% endif %}
 
       {% if cv.born %}
-        <li>
-          <i class="fas fa-fw fa-birthday-cake" aria-hidden="true"></i> <span itemprop="name">{{ cv.born }}</span>
-        </li>
+        <div class="cv_profile_detail">
+          <div class="cv_icon">
+            <i class="fas fa-birthday-cake"></i>
+          </div>
+          <div class="cv_profile_name">
+            <div id="age"></div>
+          </div>
+        </div>
+      {% endif %}
+      <!-- Script to get the Age using moment.js -->
+      <script>
+      $("#age").replaceWith(moment().diff(moment('{{cv.born}}', 'YYYY-MM-DD'), 'years')+ " Years");
+      </script>
+
+      {% if cv.nationality %}
+        {% for sec_id in cv.nationality %}
+          {% assign nat = cv[sec_id] %}
+          <div class="cv_profile_detail">
+              <div class="cv_icon">
+                <i class="fas fa-flag"></i>
+              </div>
+              <div class="cv_profile_name">
+                {{nat.name}} <span class="flag-icon flag-icon-{{nat.flag}}"></span>
+              </div>
+          </div>
+        {% endfor %}
       {% endif %}
 
-      {% if cv.driving %}
-        <li>
-          <i class="fas fa-fw fa-car" aria-hidden="true"></i> <span itemprop="name">{{ cv.driving }}</span>
-        </li>
+      {% if cv.languages %}
+        {% for sec_id in cv.languages %}
+          {% assign lan = cv[sec_id] %}
+          <div class="cv_profile_detail">
+              <div class="cv_icon">
+                <i class="fas fa-language"></i>
+              </div>
+              <div class="cv_profile_name">
+                {{lan.name}} <span class="flag-icon flag-icon-{{lan.flag}}"></span>
+              </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if cv.roles %}
+        {% for rol in cv.roles %}
+          <div class="cv_profile_detail">
+              <div class="cv_icon">
+                <i class="fas fa-tags"></i>
+              </div>
+              <div class="cv_profile_name">
+                {{rol}}
+              </div>
+          </div>
+        {% endfor %}
       {% endif %}
 
 
-    </ul>
-  </div>
-
+    </div>
 </div>

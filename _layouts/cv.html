@@ -10,6 +10,7 @@ layout: default
   <article class="cv">
       {% if forloop.first == true %}
         {% include cv-profile.html %}
+
       {% endif %}
       {% assign page_id = forloop.index %}
       {% for sec_id in cv.sections %}
