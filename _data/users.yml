@@ -1,132 +1,150 @@
 user:
   name        : "Henriques D. Afonso"
-  avatar      : "/assets/img/marcelo.jpg"
-  bio         : "Entrepreneur"
-  email       : "afonso@portugal.pt"
-  telegram    : "afonsopt"
-  location    : "Lisboa, Portugal"
-  github      : "afonsopt"
-  linkedin    : "afonsopt"
-  born        : "25 July 1109"
-  nationality : "Portuguese"
-  flag: pt
-  pages       : 2
+  avatar: /assets/img/afonso.jpg
+  bio: CEO @portugal
+  url: bandonga.com/cv/user
+  email_user  : afonso
+  email_domain : portugal.pt
+  links:
+    - linkedin
+    - github
+    - telegram
+    - keybase
+  telegram:
+    name: afonsopt
+    url: https://t.me/
+    icon: telegram
+  github :
+    name: afonsopt
+    url: https://github.com/
+    icon: github
+  linkedin:
+    name: afonsopt
+    url: https://www.linkedin.com/in/
+    icon: linkedin
+  keybase:
+    name: afonsopt
+    url: https://keybase.io/
+    icon: keybase
+  link: bandonga.com
+  location    : Guimarães
+  born        : 1109-07-25T00:00:00
+  nationality:
+    - nat_pt
+  nat_pt:
+    name: Portuguese
+    flag: pt
+  languages:
+    - lan_en
+  lan_en:
+      name: Proficient in Castilian
+      flag: es
+  roles:
+    - Entrepreneur / Manager
+  pages: 1
   sections:
       - about
       - experience
-      - bbb
+      - education
+      - skills
+      - interests
+
 
   data:
     about:
       title: Profile
-      description: "Telecom engineer working in Unified Comms Operations and Support, with a background in IT and Networking.\n
-            Broad knowledge, from VoIP Protocols to Linux Sysadmin, with troubleshooting and service maintenance experience.\n
-            Enthusiastic about open source, cloud computing, automation and containers and eager to learn more about Linux, Networking and VoIP."
+      icon: user
+      page: 1
+      groups:
+        - profile
+      profile:
+        items:
+          - profile
+        profile:
+          description: "Afonso as a strong young man, decided not to play the role of the obedient son and defied his mother. In fact, his strength gave birth to the legend that the sword he used in the many battles he engaged was so heavy that only five men could handle it. Influenced by his tutor Egas Moniz, the young Afonso grew a huge admiration for his father and his ideas, therefore fought against his mother and the Castile armies in the Battle of São Mamede in order to take the power in his hands. And he succeeded!"
     experience:
       title: Professional Experience
+      icon: briefcase
+      page: 1
       range:
-        a: 2014-01-01T00:00:00
-        b: Present
+        a: 1128-06-24T00:00:00
+        b: 1185-12-06T00:00:00
       groups:
-        - talkdesk
-        - celfocus
-        - capgemini
-      talkdesk:
-        ententy: Talkdesk
-        logo: "/assets/img/talkdesk.png"
-        url: https://talkdesk.com/
+        - pt
+        - leon
+      pt:
+        ententy: Portugal
+        url: https://portugal.pt/
+        logo: "/assets/img/portugal1143.png"
         items:
-          - network
-          - support
-        network:
-          title: VoIP Network Engineer
-          dates: Mar 2020 - Present
-          range:
-            a: 2020-03-01T00:00:00
-            b: Present
-          location   : Remote
-          description: "Specialist responsible to diagnose and solve all complex Call Quality issues (QoS, Network configuration) and SIP trunk setup between multiple SBC/PBX (such as Asterisk) and a CPaaS (such as Twilio) with troubleshooting E2E."
-        support:
-          title      : Support Engineer
-          dates      : Nov 2018 - Mar 2020
+          - king
+        king:
+          title      : CEO
+          dates      : July 1139 - December 1185
           range      :
-            a: 2018-11-01T00:00:00
-            b: 2020-03-31T00:00:00
-          location   : Lisboa
-          description: "Tier 2 responsible to diagnose and solve Call Quality issues (QoS, Network configuration) REST API platform issues for several external integrations and SIP trunks.\n
-            Acting as main POC for vendors/carrier/partners and liaison between engineering and support teams.\n
-            Identify, document, replicate and triage on product bugs and features."
+            a: 1139-07-26T00:00:00
+            b: 1185-12-06T00:00:00
+          location   : Coimbra
+          description: "The next step towards independence was to turn the Pope into an ally in order to get the Papal bull to formalize the question. To do so, Afonso Henriques fought the Moors and, following his father’s footprints, conquered new territories. The Battle of Ourique was decisive to this goal as his troops defeated the better equipped and large numbered Moorish army. Some say that this win was a true miracle."
 
-      celfocus:
-        ententy: Celfocus
-        url: https://celfocus.com/
-        logo: "/assets/img/celfocus.png"
-        items:
-          - operations
-        operations:
-          title      : Operations Support
-          dates      : Apr 2016 - Nov 2018
-          range      :
-            a: 2016-04-01T00:00:00
-            b: 2018-11-30T00:00:00
-          location   : Lisboa
-          description: "In the Unified Communications team, with the Vodafone One Net and GCC service,  working as:<br>
-            - *Service Operations*, working as a SRE (Site Reliability Engineer). Sysadmin of Red Hat Linux, Middleware Java EE AS (Weblogic), ActiveMQ JMS Broker and NOKIA mCAS. Responsible to deploy and maintain the availability of custom apps.<br>
-            Familiarity with multiple Databases (InfluxDB, Postgres, TimesTen, OracleDB)<br>
-            Scripting (bash, python) for monitoring and automation of boring stuff.<br>
-            - *Technical Support*, in Tier 2, using ITIL practices. Experience with Fault and Change management.<br>
-            Able to provide solutions to customers and work with multiple providers.<br>
-            Manage the acceptance and deploy of new product releases.
-            Provide On-Call support and work well under pressure.
-            Able to troubleshoot Networking issues and REST/SOAP Web Service. Knowledge of VoIP Protocols (essentially SIP) in the IMS Network."
-
-      capgemini:
-        ententy: Capgemini
+      leon:
+        ententy: Leon
         url: https://capgemini.com/
-        logo: "/assets/img/capgemini.png"
+        logo: "/assets/img/leon.png"
         items:
-          - consultant
-        consultant:
-          title      : Consultant
-          dates      : 2014 - Apr 2016
+          - count
+        count:
+          title      : Manager of Portugal Department
+          dates      : June 1128 - July 1139
           range      :
-            a: 2014-01-01T00:00:00
-            b: 2016-04-30T00:00:00
-          location   : Lisboa
-          description: "Project with the Celfocus Unified Comms Operations Support team, with the Vodafone One Net and IP Trunking. Experience in:<br>
-            Weblogic Server 11g administration (WebCenter Content, Portal; OSB and SOA)<br>
-            Administration of Unix/Linux Systems and Shell scripting.<br>
-            ITIL Service Support, with Tier 2 VoIP/SIP, network diagnostics and troubleshooting.<br>
-            Oracle PL/SQL and SQL SERVER DB management and query tuning."
+            a: 1128-06-24T00:00:00
+            b: 1139-07-25T00:00:00
+          location   : Guimarães
+          description: "After Teresa's death in 1131, Afonso VII of León and Castille proceeded to demand vassalage from his cousin. On 6 April 1129, Afonso Henriques dictated the writ in which he proclaimed himself Prince of Portugal or Prince of the Portuguese, an act informally allowed by Afonso VII, as it was thought to be Afonso Henriques's right by blood, as one of two grandsons of the Emperor of Hispania."
 
     education:
       title: Education
+      icon: school
+      page: 1
       groups:
-        - tecnico
-      tecnico:
-        ententy: Técnico - Universidade de Lisboa
-        url: https://tecnico.ulisboa.pt/en/
-        logo: "/assets/img/tecnico.png"
+        - egas
+      egas:
+        ententy: Egas Moniz Uni
+        url: https://egasoaio.pt/
+        logo: "/assets/img/egas.png"
         items:
           - meec
         meec:
-          title      : Master's in Computers & Electrical Engineering
-          location   : Lisboa
-          description: "**Specialisation in Telecommunications and Computers** <br>
-          *Knowledge of:* Fundamentals of Communications, Propagation and Radiation and Telecommunication Networks and Systems.<br>
-          Development of programming skills in C, JAVA and MATLAB. SQL, DB modulation and Entity relationship diagrams. Additional basic knowledge of Mathematica, HTML5, Javascript, PHP."
+          title      : Master in Management
+          location   : Guimarães
+          description: Egas Moniz de Ribadouro, possibly with the help of oral memories that associated the tutor to the house of Ribadouro. Yet, contemporary documents, namely from the chancery of Afonso in his early years as count of Portucale, indicate that the most likely tutor of Afonso Henriques was Egas Moniz's oldest brother, Ermígio Moniz, who, besides being the senior brother within the family of Ribadouro, became the "dapifer" and "majordomus" of Afonso I from 1128 until his death in 1135, which indicates his closer proximity to the prince
+
+    skills:
+      title: Skills
+      icon: tools
+      page: 1
+      groups:
+        - skills
+      skills:
+        items:
+          - skills
+        skills:
+          description: "
+           -- Aged 14, makes himself a Knight on his own account in the Cathedral of Zamora.<br>
+           -- Defeats his mother, Theresa, Countess of Portugal, in the Battle of São Mamede and becomes Duke.<br>
+           -- Proclaims himself Prince of Portugal."
 
     interests:
       title: Interests
       icon: mountain
-      page: 2
+      page: 1
       groups:
         - interests
       interests:
         items:
           - interests
         interests:
-          description: "Running"
+          description: Fighting and Swords. It was too big to be called a sword. Massive, thick, heavy, and far too rough. Indeed, it was a heap of raw iron. There are mythical stories that it took 5 men to carry his sword, and that Afonso wanted to engage other monarchs in personal combat, but no one would dare accept his challenge.
 
 
 marcelo:
@@ -289,12 +307,12 @@ marcelo:
         - tecnico
       tecnico:
         ententy: Técnico - Universidade de Lisboa
-        url: https://tecnico.ulisboa.pt/en/
+        url: https://tecnico.ulisboa.pt/
         logo: "/assets/img/tecnico.png"
         items:
           - meec
         meec:
-          title      : Master's in Computers & Electrical Engineering
+          title      : Master in Computers & Electrical Engineering
           location   : Lisboa
           description: "**Specialisation in Telecommunications and Computers** <br>
           *Knowledge of:* Fundamentals of Communications, Propagation and Radiation and Telecommunication Networks and Systems.<br>
@@ -444,15 +462,3 @@ marcelo:
         projects:
           description: "Columnist in the Integral newspaper, about Técnico to it's students, 2012.<br>
             Winner of [Global Management Challenge](https://globalmanagementchallenge.pt/) at Técnico and Accenture, 2011."
-
-    interests:
-      title: Interests
-      icon: mountain
-      page: 2
-      groups:
-        - interests
-      interests:
-        items:
-          - interests
-        interests:
-          description: "Running"

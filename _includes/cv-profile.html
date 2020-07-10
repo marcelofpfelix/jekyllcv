@@ -9,7 +9,10 @@
       <img src="{{ cv.avatar }}" alt="{{ cv.name }}"">
   </div>
 {% endif %}
-    <div id="cv_name">{{ cv.name }}</div>
+    <div id="cv_name" >{{ cv.name }}</div>
+    <script>
+      jQuery("#cv_name").fitText();
+    </script>
     <p id="cv_bio">{{ cv.bio }}</p>
 </div>
 
