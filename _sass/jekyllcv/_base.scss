@@ -11,13 +11,6 @@ html {
   text-align: justify;
 }
 
-/*
- * Reset some basic elements
- */
-
-
-
-
 /**
  * Basic styling
  */
@@ -27,32 +20,7 @@ body {
   font-kerning: normal;
 }
 
-/**
- * Lists
 
-ul, ol {
-  margin-left: $spacing-unit;
-}
-
-li {
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
-}
-
-
- * Images
-
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
- */
-
-/**
- * Links
- */
 a {
   color: $link-base-color;
   text-decoration: none;

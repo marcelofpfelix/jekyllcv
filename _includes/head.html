@@ -1,7 +1,25 @@
+{% assign user = page.user | default: site.user %}
+{% assign cv = site.data.users[user] | default: user %}
+
+{% if cv.name %}
+  {% assign title = cv.name %}
+{% else %}
+  {% assign title = page.title | default: site.title %}
+{% endif %}
+
+{% if cv.favicon %}
+  {% assign favicon = cv.favicon %}
+{% else %}
+  {% assign favicon = "/assets/img/jekyllcv/favicon.ico" %}
+{% endif %}
+
+
 <head>
   <!-- meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{{title}}</title>
 
   <!--css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -12,12 +30,11 @@
 
   <!--favicon -->
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="icon" sizes="16x16 32x32 64x64" href="/assets/images/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="{{favicon}}">
 
   <!--scripts-->
   <script src="https://kit.fontawesome.com/a3e38ae6a5.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="{{ "/assets/js/script.js" | relative_url }}"></script>
 </head>

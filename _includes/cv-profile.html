@@ -4,6 +4,7 @@
 
 <div id="cv_avatar">
 
+<!-- Profile -->
 {% if cv.avatar %}
   <div id="avatar">
       <img src="{{ cv.avatar }}" alt="{{ cv.name }}"">
@@ -22,7 +23,7 @@
 
     <div class="cv_profile_h">Contact</div>
 
-    <!-- Profile -->
+    <!-- Contacts -->
     {% if cv.email_user %}
       <div class="cv_profile_detail">
         <div class="cv_icon">
@@ -34,7 +35,7 @@
       </div>
     {% endif %}
 
-
+    <!-- social media -->
     {% for sec_id in cv.links %}
       {% assign account = cv[sec_id] %}
       <div class="cv_profile_detail">

@@ -1,10 +1,10 @@
 user:
-  name        : "Henriques D. Afonso"
-  avatar: /assets/img/afonso.jpg
+  name: "Henriques D. Afonso"
+  avatar: /assets/img/user/afonso.jpg
   bio: CEO @portugal
   url: bandonga.com/cv/user
-  email_user  : afonso
-  email_domain : portugal.pt
+  email_user : afonso
+  email_domain: portugal.pt
   links:
     - linkedin
     - github
@@ -49,7 +49,6 @@ user:
       - skills
       - interests
 
-
   data:
     about:
       title: Profile
@@ -75,7 +74,7 @@ user:
       pt:
         ententy: Portugal
         url: https://portugal.pt/
-        logo: "/assets/img/portugal1143.png"
+        logo: "/assets/img/user/portugal1143.png"
         items:
           - king
         king:
@@ -89,8 +88,8 @@ user:
 
       leon:
         ententy: Leon
-        url: https://capgemini.com/
-        logo: "/assets/img/leon.png"
+        url: https://leon.es/
+        logo: "/assets/img/user/leon.png"
         items:
           - count
         count:
@@ -111,7 +110,7 @@ user:
       egas:
         ententy: Egas Moniz Uni
         url: https://egasoaio.pt/
-        logo: "/assets/img/egas.png"
+        logo: "/assets/img/user/egas.png"
         items:
           - meec
         meec:
@@ -149,7 +148,8 @@ user:
 
 marcelo:
   name: Marcelo Félix
-  avatar: /assets/img/marcelo.jpg
+  avatar: /assets/img/marcelo/marcelo.jpg
+  favicon: /assets/img/marcelo/marcelo.ico
   bio: Telecom Engineer @talkdesk
   url: bandonga.com/cv/marcelo
   email_user  : marcelo
@@ -232,7 +232,7 @@ marcelo:
         - capgemini
       talkdesk:
         ententy: Talkdesk
-        logo: "/assets/img/talkdesk.png"
+        logo: "/assets/img/marcelo/talkdesk.png"
         url: https://talkdesk.com/
         items:
           - network
@@ -259,7 +259,7 @@ marcelo:
       celfocus:
         ententy: Celfocus
         url: https://celfocus.com/
-        logo: "/assets/img/celfocus.png"
+        logo: "/assets/img/marcelo/celfocus.png"
         items:
           - operations
         operations:
@@ -283,7 +283,7 @@ marcelo:
       capgemini:
         ententy: Capgemini
         url: https://capgemini.com/
-        logo: "/assets/img/capgemini.png"
+        logo: "/assets/img/marcelo/capgemini.png"
         items:
           - consultant
         consultant:
@@ -308,7 +308,7 @@ marcelo:
       tecnico:
         ententy: Técnico - Universidade de Lisboa
         url: https://tecnico.ulisboa.pt/
-        logo: "/assets/img/tecnico.png"
+        logo: "/assets/img/marcelo/tecnico.png"
         items:
           - meec
         meec:
@@ -327,7 +327,7 @@ marcelo:
       webLogic:
         ententy: WebLogic Server 12c Administrator
         url: https://www.youracclaim.com/users/marcelofelix
-        logo: "/assets/img/weblogic.png"
+        logo: "/assets/img/marcelo/weblogic.png"
         items:
           - oracle
         oracle:
@@ -362,7 +362,7 @@ marcelo:
       best:
         ententy: Best
         url: https://www.best.eu.org
-        logo: "/assets/img/best.jpeg"
+        logo: "/assets/img/marcelo/best.png"
         items:
           - course
         course:
@@ -374,7 +374,7 @@ marcelo:
       systemsgroup:
         ententy: SystemsGroup
         url: https://systems-group.org/
-        logo: "/assets/img/systemsgroup.png"
+        logo: "/assets/img/marcelo/systemsgroup.png"
         items:
           - fiscal
         fiscal:
@@ -385,7 +385,7 @@ marcelo:
       desordem:
         ententy: República "A Desordem dos Engenheiros"
         url: https://desordem.org
-        logo: "/assets/img/desordem.png"
+        logo: "/assets/img/marcelo/desordem.png"
         items:
           - board
         board:
@@ -406,7 +406,7 @@ marcelo:
       gastagus:
         ententy: GASTagus
         url: https://www.gastagus.org
-        logo: "/assets/img/gastagus.png"
+        logo: "/assets/img/marcelo/gastagus.png"
         items:
           - gastagus
         gastagus:
@@ -417,7 +417,7 @@ marcelo:
       acrides:
         ententy: ACRIDES
         url: http://acrides.org.cv
-        logo: "/assets/img/acrides.png"
+        logo: "/assets/img/marcelo/acrides.png"
         items:
           - acrides
         acrides:
@@ -429,7 +429,7 @@ marcelo:
       namaacha:
         ententy: Colégio Maria Auxiliadora
         url: https://sdb.org
-        logo: "/assets/img/salesianos.png"
+        logo: "/assets/img/marcelo/salesianos.png"
         items:
           - namaacha
         namaacha:
@@ -441,7 +441,7 @@ marcelo:
       leigos:
         ententy: Leigos para o Desenvolvimento
         url: https://pontosj.pt/leigos/
-        logo: "/assets/img/leigos.png"
+        logo: "/assets/img/marcelo/leigos.png"
         items:
           - leigos
         leigos:

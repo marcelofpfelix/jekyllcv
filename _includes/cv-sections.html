@@ -1,5 +1,6 @@
 {% assign section = include.section %}
 
+<!-- Sectio title -->
 <h3 class="cv_section">
   <div id="textbox">
     <i class="fas fa-{{section.icon}}"></i>
@@ -15,6 +16,7 @@
 </h3>
 <div style="clear: both;"></div>
 
+<!-- script to get the range in years -->
 <script>
   if (moment('{{section.range.b}}').isValid()) {
     b = moment('{{section.range.b}}', 'YYYY-MM-DD');
@@ -24,31 +26,35 @@
   $("#exp").replaceWith("   "	+ Math.round(b.diff(moment('{{section.range.a}}', 'YYYY-MM-DD'), 'years', true) * 10) / 10 + " y");
 </script>
 
+<!-- group logo and title -->
 {% for group_id in section.groups %}
-
   {% assign group = section.[group_id] %}
   <a href="{{ group.url }}">
     <img src="{{ group.logo }}" alt="{{ group.ententy }}">
     <h4 class="cv_ententy">{{group.ententy}}</h4>
   </a>
 
+  <!-- item position -->
   {% assign after_logo = false %}
   {% for item_id in group.items %}
     {% assign item = group.[item_id] %}
 
     <div id="textbox">
     <div class="cv_item">
+      <!-- for >1 positions -->
       {% if after_logo %}
         <i class="far fa-circle"></i>
       {% endif %}
       {% assign after_logo = true %}
       {{item.title | escape }}
 
+      <!-- item location and flag -->
       <div class="alignright">
         {% if {{item.flag}} %}
           <span class="flag-icon flag-icon-{{item.flag}}"></span>
         {% endif %}
         {{item.location}}
+        <!-- item dates -->
         {% if item.dates %}
           , {{item.dates}}
         {% endif %}

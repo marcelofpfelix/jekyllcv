@@ -2,9 +2,10 @@
 layout: default
 ---
 
-{% assign user = page.user | default: page.users[0] | default: site.user %}
+{% assign user = page.user | default: site.user %}
 {% assign cv = site.data.users[user] | default: user %}
 
+<!-- download message -->
 <div class="no-print">
   <div id="cv_download">
     You can also
@@ -17,7 +18,9 @@ layout: default
 {% for i in (1..cv.pages) %}
   <section class="sheet padding-10mm">
     <article class="cv">
+      <!-- in the first page-->
       {% if forloop.first == true %}
+        <!-- profile row and info message -->
         {% include cv-profile.html %}
         {% if cv.url %}
           <div id="cv_info_message">
@@ -32,6 +35,7 @@ layout: default
         {% endif %}
       {% endif %}
 
+      <!-- write sections -->
       {% assign page_id = forloop.index %}
       {% for sec_id in cv.sections %}
         {% if cv.data[sec_id].page == page_id %}
@@ -40,6 +44,7 @@ layout: default
         {% endif %}
       {% endfor %}
 
+      <!-- made by footer -->
       <div id="cv_foot">
         <div id="cv_madeby">
            <i class="fab fa-osi"></i> made with <a href="https:///github.com/marcelofpfelix/jekyllcv">marcelofpfelix/jekyllcv</a>.
