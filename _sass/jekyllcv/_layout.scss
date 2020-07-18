@@ -1,5 +1,50 @@
 @charset "utf-8";
 
+/*
+ * Set page size here: A5, A4 or A3
+ * Set also "landscape" if you need
+ */
+@page {
+  size: A4
+}
+
+html {
+  font-size: $base-font-size;
+  text-align: justify;
+}
+
+/**
+ * Basic styling
+ */
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  font-kerning: normal;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+
+}
+
+a {
+  color: $link-base-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+
 .cv_section {
   color: $brand-color;
   font-size: $base-font-size * 1.5;
@@ -69,15 +114,6 @@
 	color: $brand-color;
 }
 
-
-  body, h1, h2, h3, h4, h5, h6,
-  p, blockquote, pre, hr,
-  dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-
-  }
-
 .cv {
   img {
     border-radius: 5px;
@@ -89,11 +125,52 @@
   img:hover {
     box-shadow: 0 0 2px 1px $brand-color-light;
   }
-
-
 }
 
 
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: 0.9375em;
+  border: 1px solid $text-color-light;
+  border-radius: 3px;
+  background-color: $text-color-light1;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.page {
+  body, h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre, hr,
+  dl, dd, ol, ul, figure {
+    margin-bottom: 15px;
+  }
+  img {
+    border-radius: 5px;
+    margin: 0 auto;
+    height: 200px;
+    display: block;
+  }
+}
+
+.page {
+
+}
 
 #avatar {
   img {
@@ -198,20 +275,11 @@
   }
 }
 
+/**
+ * to not print the download message
+ */
 @media print {
    .no-print {
        display: none;
     }
-}
-
-/******************************************************************************/
-
-
-
-.page {
-  body, h1, h2, h3, h4, h5, h6,
-  p, blockquote, pre, hr,
-  dl, dd, ol, ul, figure {
-    margin-bottom: 15px;
-  }
 }

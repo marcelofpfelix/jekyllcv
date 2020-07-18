@@ -1,8 +1,8 @@
 # jekyllcv
 
-CV based on YAML, using [jekyll](https://github.com/jekyll/jekyll).
+CV based on YAML, using [jekyll](https://github.com/jekyll/jekyll). [Github Repository: marcelofpfelix/jekyllcv](https:///github.com/marcelofpfelix/jekyllcv)
 
-Converts:
+Converts this [yaml file](https://github.com/marcelofpfelix/jekyllcv/blob/master/_data/users.yml) in the printing html page seen bellow.
 
 ```yaml
 user:
@@ -17,8 +17,11 @@ user:
     - github
 ```
 
+[![](assets/img/jekyllcv/html.png)](user)
 
-* [example](/user)
+### Example
+
+To see an example, please check the **[demo](user)** CV , using this [yaml file](https://github.com/marcelofpfelix/jekyllcv/blob/master/_data/users.yml).
 
 
 ### Using:
