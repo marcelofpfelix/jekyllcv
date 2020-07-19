@@ -1,6 +1,6 @@
 user:
   name: "Henriques D. Afonso"
-  avatar: /assets/img/user/afonso.jpg
+  avatar: assets/img/user/afonso.jpg
   bio: CEO @portugal
   url: bandonga.com/cv/user
   email_user : afonso
@@ -74,7 +74,7 @@ user:
       pt:
         ententy: Portugal
         url: https://portugal.pt/
-        logo: "/assets/img/user/portugal1143.png"
+        logo: "assets/img/user/portugal1143.png"
         items:
           - king
         king:
@@ -89,7 +89,7 @@ user:
       leon:
         ententy: Leon
         url: https://leon.es/
-        logo: "/assets/img/user/leon.png"
+        logo: "assets/img/user/leon.png"
         items:
           - count
         count:
@@ -110,7 +110,7 @@ user:
       egas:
         ententy: Egas Moniz Uni
         url: https://egasoaio.pt/
-        logo: "/assets/img/user/egas.png"
+        logo: "assets/img/user/egas.png"
         items:
           - meec
         meec:
