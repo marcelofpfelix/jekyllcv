@@ -19,7 +19,7 @@ user:
     - github
 ```
 
-[![](assets/img/jekyllcv/html.png)](user)
+[![](assets/img/jekyllcv/html.png)](https://marcelofpfelix.github.io/jekyllcv/user)
 
 ### Example
 
