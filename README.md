@@ -11,7 +11,7 @@ user:
   name: "Henriques D. Afonso"
   avatar: assets/img/afonso.jpg
   bio: CEO @portugal
-  url: bandonga.com/cv/user
+  url: marcelofpfelix.github.io/jekyllcv/user
   email_user  : afonso
   email_domain : portugal.pt
   links:
