@@ -9,7 +9,7 @@ Converts this [yaml file](https://github.com/marcelofpfelix/jekyllcv/blob/master
 ```yaml
 user:
   name: "Henriques D. Afonso"
-  avatar: /assets/img/afonso.jpg
+  avatar: assets/img/afonso.jpg
   bio: CEO @portugal
   url: bandonga.com/cv/user
   email_user  : afonso
