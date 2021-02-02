@@ -13,12 +13,22 @@
   {% assign favicon = "assets/img/jekyllcv/favicon.ico" %}
 {% endif %}
 
+{% if cv.og %}
+  {%- assign page_teaser_image = cv.og_image | default: site.og_image | absolute_url -%}
+  {% assign og_image = cv.og_image %}
+{% else %}
+  {% assign og_image = "assets/img/jekyllcv/favicon.ico" %}
+{% endif %}
 
 <head>
   <!-- meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  {% seo %}
+  {%- seo -%}
+  {% if og_image %}
+    <meta property="og:image" content="{{ og_image }}">
+  {% endif %}
+  
   <title>{{title}}</title>
 
   <!--css -->
