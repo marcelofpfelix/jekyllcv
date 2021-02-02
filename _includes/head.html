@@ -13,7 +13,7 @@
   {% assign favicon = "assets/img/jekyllcv/favicon.ico" %}
 {% endif %}
 
-{% if cv.og %}
+{% if cv.og_image %}
   {%- assign page_teaser_image = cv.og_image | default: site.og_image | absolute_url -%}
   {% assign og_image = cv.og_image %}
 {% else %}
