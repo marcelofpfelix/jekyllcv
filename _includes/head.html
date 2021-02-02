@@ -14,10 +14,9 @@
 {% endif %}
 
 {% if cv.og_image %}
-  {%- assign page_teaser_image = cv.og_image | default: site.og_image | absolute_url -%}
-  {% assign og_image = cv.og_image %}
+  {%- assign og_image = cv.og_image | default: site.og_image | absolute_url -%}
 {% else %}
-  {% assign og_image = "assets/img/marcelo/og.png" %}
+  {% assign og_image = "assets/img/jekyllcv/favicon.ico" %}
 {% endif %}
 
 <head>
