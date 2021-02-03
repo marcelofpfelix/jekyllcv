@@ -18,6 +18,16 @@
 {% else %}
   {% assign og_image = "assets/img/jekyllcv/favicon.ico" %}
 {% endif %}
+{% if cv.og_image %}
+  {%- assign og_image = cv.og_image | default: site.og_image | absolute_url -%}
+{% else %}
+  {% assign og_image = "assets/img/jekyllcv/favicon.ico" %}
+{% endif %}
+{% if cv.description %}
+  {% assign og_description = cv.description %}
+{% else %}
+  {% assign og_description = page.description | default: site.description %}
+{% endif %}
 
 <head>
   <!-- meta tags -->
@@ -25,8 +35,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   {% if og_image %}
-    <meta property="og:image" content="{{ og_image }}">
+    <meta prefix="og: http://ogp.me/ns#"  property="og:image" content="{{ og_image }}">
   {% endif %}
+  {% if title %}
+    <meta prefix="og: http://ogp.me/ns#"  property="og:title" content="{{ title }}">
+  {% endif %}
+  {% if og_description %}
+    <meta prefix="og: http://ogp.me/ns#"  property="og:description" content="{{ og_description }}">
+  {% endif %}
+  <meta prefix="og: http://ogp.me/ns#"  property="og:type" content="profile">
+  <meta prefix="og: http://ogp.me/ns#"  property="og:url" content="{{ page.url  }}">
+
   
   <title>{{title}}</title>
 
