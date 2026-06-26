@@ -32,7 +32,7 @@ To see an example, please check the **[demo](https://marcelofpfelix.github.io/je
 * **[cognitom/paper-css](https://github.com/cognitom/paper-css):** front-end printing solution
 * **[necolas/normalize.css](https://github.com/necolas/normalize.css):** CSS resets
 * **[google/fonts](https://github.com/google/fonts):** catalog with fonts
-* **[lipis/flag-icon-css](https://github.com/lipis/flag-icon-css):** collection with country flags in CSS
+* **[lipis/flag-icons](https://github.com/lipis/flag-icons):** collection with country flags in CSS
 * **[jquery/jquery](https://github.com/jquery/jquery):** lib to simplify HTML DOM selection
 * **[moment/moment](https://github.com/moment/moment):** lib to calculate dates
 * **[davatron5000/FitText.js](https://github.com/davatron5000/FitText.js):** font resizing
