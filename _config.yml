@@ -6,3 +6,7 @@ description: >
 
 include:
   - _pages
+
+jekyllcv:
+  template: default
+  theme: default

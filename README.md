@@ -26,6 +26,22 @@ user:
 To see an example, please check the **[demo](https://marcelofpfelix.github.io/jekyllcv/user)** CV , using this [yaml file](https://github.com/marcelofpfelix/jekyllcv/blob/master/_data/users.yml).
   * You can also check *Marcelo Félix* real CV, available at  **[bandonga.com/cv/marcelo](https://bandonga.com/cv/marcelo)**, using this [yaml file](https://github.com/bandonga/cv/blob/master/_data/users.yml).
 
+### Templates and themes
+
+Templates control the CV page and section structure. Themes control the color palette.
+
+The default configuration keeps the original CV format:
+
+```yaml
+jekyllcv:
+  template: default
+  theme: default
+```
+
+You can override the template per page with `cv_template`, or per user entry with `template`. Template files live in `_includes/cv-templates/`.
+
+You can add more themes under `_sass/jekyllcv/themes/` and set `jekyllcv.theme` to the file name without `.scss`. The bundled themes are `default` and `graphite`.
+
 ### Using:
 * **[jekyll/jekyll](https://github.com/jekyll/jekyll):** static site generator
 * **[FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome):** icon toolkit

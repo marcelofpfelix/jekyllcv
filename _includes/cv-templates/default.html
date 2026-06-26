@@ -1,0 +1,49 @@
+<!-- download message -->
+<div class="no-print">
+  <div id="cv_download">
+    You can also
+    <a href="javascript:window.print()">
+       <i class="fas fa-print"></i> Print or <i class="fas fa-save"></i> Save it as PDF
+    </a>.
+  </div>
+</div>
+
+{% for i in (1..cv.pages) %}
+  <section class="sheet padding-10mm">
+    <article class="cv cv-template-default">
+      <!-- in the first page-->
+      {% if forloop.first == true %}
+        <!-- profile row and info message -->
+        {% include cv-profile.html %}
+        {% if cv.url %}
+          <div id="cv_info_message">
+
+            <i class="fas fa-info-circle brand-color"></i>
+
+            You can find this CV always updated at
+            <a href="https://{{cv.url}}">
+               {{cv.url}}
+            </a>.
+          </div>
+        {% endif %}
+      {% endif %}
+
+      <!-- write sections -->
+      {% assign page_id = forloop.index %}
+      {% for sec_id in cv.sections %}
+        {% if cv.data[sec_id].page == page_id %}
+          {% assign section = cv.data[sec_id] %}
+          {% include cv-sections.html section = section %}
+        {% endif %}
+      {% endfor %}
+
+      <!-- made by footer -->
+      <div id="cv_foot">
+        <div id="cv_madeby">
+           <i class="fab fa-osi"></i> made with <a href="https:///github.com/marcelofpfelix/jekyllcv">marcelofpfelix/jekyllcv</a>.
+        </div>
+      </div>
+
+    </article>
+  </section>
+{% endfor %}

@@ -1,0 +1,26 @@
+$brand-color:            #2F4858 !default;
+$brand-color-light:      #4F6F7D !default;
+$brand-color-light1:     #DCE7EA !default;
+$brand-color-dark:       #18252C !default;
+
+$download-color:         #D98E04 !default;
+$download-color-light:   #F5D79B !default;
+
+$text-color:             #15191C !default;
+$text-color-light:       #606A70 !default;
+
+$text-color-light1:      #F5F7F8 !default;
+$text-color-light3:      #E1E7EA !default;
+$text-color-light5:      #A9B4BA !default;
+
+
+$link-base-color:        $text-color !default;
+$link-visited-color:     $text-color !default;
+$link-hover-color:       $brand-color-light !default;
+
+$base-font-family: 'Open Sans', sans-serif !default;
+$base-font-size:   12px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+$spacing-unit:     30px !default;

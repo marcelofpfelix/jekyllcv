@@ -1,0 +1,26 @@
+$brand-color:            #21618C !default;
+$brand-color-light:      rgb(64.8265895954, 151.7630057803, 210.1734104046) !default;
+$brand-color-light1:     rgb(229.9132947977, 241.3815028902, 249.0867052023) !default;
+$brand-color-dark:       rgb(11.1734104046, 32.2369942197, 44.8265895954) !default;
+
+$download-color:         #58D68D !default;
+$download-color-light:   rgb(251.7884615385, 254.2115384615, 252.8076923077) !default;
+
+$text-color:             #111111 !default;
+$text-color-light:       rgb(93.5, 93.5, 93.5) !default;
+
+$text-color-light1:      rgb(246.5, 246.5, 246.5) !default;
+$text-color-light3:      rgb(195.5, 195.5, 195.5) !default;
+$text-color-light5:      rgb(144.5, 144.5, 144.5) !default;
+
+
+$link-base-color:        $text-color !default;
+$link-visited-color:     $text-color !default;
+$link-hover-color:       $brand-color-light !default;
+
+$base-font-family: 'Open Sans', sans-serif !default;
+$base-font-size:   12px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+$spacing-unit:     30px !default;
