@@ -8,20 +8,20 @@
 {% endif %}
 
 {% if cv.favicon %}
-  {% assign favicon = cv.favicon %}
+  {% assign favicon = cv.favicon | relative_url %}
 {% else %}
-  {% assign favicon = "assets/img/jekyllcv/favicon.ico" %}
+  {% assign favicon = "assets/img/jekyllcv/favicon.ico" | relative_url %}
 {% endif %}
 
 {% if cv.og_image %}
   {%- assign og_image = cv.og_image | default: site.og_image | absolute_url -%}
 {% else %}
-  {% assign og_image = "assets/img/jekyllcv/favicon.ico" %}
+  {% assign og_image = "assets/img/jekyllcv/favicon.ico" | absolute_url %}
 {% endif %}
 {% if cv.og_image %}
   {%- assign og_image = cv.og_image | default: site.og_image | absolute_url -%}
 {% else %}
-  {% assign og_image = "assets/img/jekyllcv/favicon.ico" %}
+  {% assign og_image = "assets/img/jekyllcv/favicon.ico" | absolute_url %}
 {% endif %}
 {% if cv.description %}
   {% assign og_description = cv.description %}
@@ -64,7 +64,7 @@
   <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | relative_url }}">
 
   <!--favicon -->
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="{{ favicon }}">
   <link rel="icon" sizes="16x16 32x32 64x64" href="{{favicon}}">
 
   <!--scripts-->

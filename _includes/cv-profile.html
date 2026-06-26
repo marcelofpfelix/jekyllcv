@@ -7,7 +7,7 @@
 <!-- Profile -->
 {% if cv.avatar %}
   <div id="avatar">
-      <img src="{{ cv.avatar }}" alt="{{ cv.name }}"">
+      <img src="{{ cv.avatar | relative_url }}" alt="{{ cv.name }}">
   </div>
 {% endif %}
     <div id="cv_name" >{{ cv.name }}</div>

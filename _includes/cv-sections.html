@@ -30,7 +30,9 @@
 {% for group_id in section.groups %}
   {% assign group = section.[group_id] %}
   <a href="{{ group.url }}">
-    <img src="{{ group.logo }}" alt="{{ group.ententy }}">
+    {% if group.logo %}
+      <img src="{{ group.logo | relative_url }}" alt="{{ group.ententy }}">
+    {% endif %}
     <h4 class="cv_ententy">{{group.ententy}}</h4>
   </a>
 
