@@ -241,12 +241,16 @@ pre {
 
 #cv_download {
   background: $download-color;
+  color: $download-text-color;
   border-radius: 5px;
   padding: 4px;
   padding-left: 10px;
   padding-right: 10px;
   width: 680px;
   margin: 0 auto;
+  a {
+    color: $download-text-color;
+  }
   a:hover {
     color: $download-color-light;
     text-decoration: underline;
